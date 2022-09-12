@@ -14,7 +14,7 @@ void main(){
     printf("\nArea = ");
     printf(area);
     printf("Hola");
-    
     for(d = 10; d<20; d++) {
+
     }
 }

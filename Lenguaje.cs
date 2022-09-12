@@ -60,7 +60,7 @@ namespace Evalua
         {
             foreach (Variable L in variables)
             {
-                if (L.getNombre().Equals(nombreVariable)) 
+                if (L.getNombre().Equals(nombreVariable))
                 {
                     return L.getValor();
                 }
@@ -217,7 +217,7 @@ namespace Evalua
             }
             log.WriteLine();
             log.Write(getContenido() + " = ");
-            
+
             match(Tipos.Identificador);
             match(Tipos.Asignacion);
             Expresion();
@@ -298,7 +298,7 @@ namespace Evalua
                 match("++");
                 modVariable(variable, getValor(variable) + 1);
             }
-            else if(getContenido() == "--")
+            else if (getContenido() == "--")
             {
                 match("--");
                 modVariable(variable, getValor(variable) - 1);
@@ -425,9 +425,9 @@ namespace Evalua
             {
                 throw new Error("ERROR DE SINTAXIS: Variable no declarada <" + getContenido() + "> en linea: " + linea, log);
             }
-            string val = ""+Console.ReadLine();
+            string val = "" + Console.ReadLine();
             //Requerimiento 5: Modificar el valor de la variable
-            modVariable(getContenido(),float.Parse(val));
+            modVariable(getContenido(), float.Parse(val));
             match(Tipos.Identificador);
             match(")");
             match(";");
